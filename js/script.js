@@ -13,24 +13,50 @@ function getRandomInt(max) {
     let playerAnswer = playerSelection.toLowerCase();
     
     if(playerAnswer === "rock"){
-        if(computerAnswer === "paper") return "You Lose! Paper beats Rock";
-        else if(computerAnswer === "scissors") return "You Win! Rock beats Scissors";
-        else return "It's a Draw"; 
+        if(computerAnswer === "paper") {
+            console.log("You Lose! Paper beats Rock");
+            return -1;
+        }
+        else if(computerAnswer === "scissors"){
+            console.log("You Win! Rock beats Scissors");
+            return 1;
+        }
+        else {
+            console.log("It's a Draw");
+            return 0; 
+        }
     }
     else if(playerAnswer === "paper"){
-        if(computerAnswer === "scissors") return "You Lose! Scissors beats Paper";
-        else if(computerAnswer === "rock") return "You Win! Paper beats Rock";
-        else return "It's a Draw"; 
+        if(computerAnswer === "scissors") {
+            console.log("You Lose! Scissors beats Paper");
+            return -1;
+        }
+        else if(computerAnswer === "rock"){
+            console.log("You Win! Paper beats Rock");
+            return 1;
+        }
+        else {
+            console.log("It's a Draw");
+            return 0; 
+        } 
     }
     else if(playerAnswer === "scissors"){
-        if(computerAnswer === "rock") return "You Lose! Rock beats Scissors";
-        else if(computerAnswer === "paper") return "You win! Scissors beats Paper";
-        else return "It's a Draw"; 
+        if(computerAnswer === "rock") {
+            console.log("You Lose! Rock beats Scissors");
+            return -1;
+        }
+        else if(computerAnswer === "paper"){
+            console.log("You Win! Scissors beats Paper");
+            return 1;
+        }
+        else {
+            console.log("It's a Draw");
+            return 0; 
+        }
     }
 
   }
 
 const playerSelection = "rock";
 const computerSelection = computerPlay();
-console.log(computerSelection);
 console.log(playRound(playerSelection, computerSelection));
