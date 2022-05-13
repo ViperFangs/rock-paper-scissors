@@ -11,7 +11,11 @@ function getRandomInt(max) {
   function playRound(playerSelection, computerSelection){
     let computerAnswer = computerSelection.toLowerCase();
     let playerAnswer = playerSelection.toLowerCase();
-    
+    playRoundHelper(playerAnswer, computerAnswer);
+
+  }
+
+  function playRoundHelper(playerAnswer, computerAnswer){
     if(playerAnswer === "rock"){
         if(computerAnswer === "paper") {
             console.log("You Lose! Paper beats Rock");
@@ -26,6 +30,7 @@ function getRandomInt(max) {
             return 0; 
         }
     }
+
     else if(playerAnswer === "paper"){
         if(computerAnswer === "scissors") {
             console.log("You Lose! Scissors beats Paper");
@@ -40,6 +45,7 @@ function getRandomInt(max) {
             return 0; 
         } 
     }
+
     else if(playerAnswer === "scissors"){
         if(computerAnswer === "rock") {
             console.log("You Lose! Rock beats Scissors");
@@ -54,9 +60,8 @@ function getRandomInt(max) {
             return 0; 
         }
     }
-
   }
 
 const playerSelection = "rock";
 const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+playRound(playerSelection, computerSelection);
