@@ -86,3 +86,5 @@ function game(){
         }
      }
 }
+
+game();
