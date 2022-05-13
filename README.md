@@ -1,6 +1,6 @@
 # rock-paper-scissors
 
-Hello everyone, this is the rock paper scissors project on the odin project (built from scratch)
+Hello everyone, this is the rock paper scissors project on the non-GUI odin project (built from scratch)
 
 in this project, I will be utilizing JavaScript functions and make a rock, paper, scissors game!
 
