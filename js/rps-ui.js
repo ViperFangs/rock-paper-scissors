@@ -66,16 +66,15 @@ let button = document.querySelectorAll('button');
 button.forEach(item => {
     item.addEventListener('click', event => {
         if(item.getAttribute('id') == "rock"){
-            console.log('rock');
             playRound("rock", computerPlay());
         }
         
         if(item.getAttribute('id') == "paper"){
-            console.log('paper');
+            playRound("paper", computerPlay());
         }
 
         if(item.getAttribute('id') == "scissors"){
-            console.log('scissors');
+            playRound("scissors", computerPlay());
         }
 
         //event.stopPropagation();
