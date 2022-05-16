@@ -93,6 +93,11 @@ button{
     gap: 24px;
 }
 
+.popup-container.show{
+    pointer-events: auto;
+    opacity: 1;
+}
+
 .repeat-button{
     background-color: #e63946;
     min-height: 20px;
