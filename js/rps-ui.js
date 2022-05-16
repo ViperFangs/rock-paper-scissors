@@ -1,5 +1,5 @@
 const button = document.querySelectorAll('button');
-const score = document.getElementById('score');
+const middleContainer = document.getElementById('middle-container');
 const playerScoreContainer = document.getElementById('playerScore');
 const computerScoreContainer = document.getElementById('computerScore');
 const popupContainer = document.querySelector('.popup-container');
@@ -29,45 +29,45 @@ function playRound(playerSelection, computerSelection){
 function playRoundHelper(playerAnswer, computerAnswer){
     if(playerAnswer === "rock"){
         if(computerAnswer === "paper") {
-            score.textContent = "You Lose! Paper beats Rock";
+            middleContainer.textContent = "You Lose! Paper beats Rock";
             return -1;
         }
         else if(computerAnswer === "scissors"){
-            score.textContent = "You Win! Rock beats Scissors";
+            middleContainer.textContent = "You Win! Rock beats Scissors";
             return 1;
         }
         else {
-            score.textContent = "It's a Draw";
+            middleContainer.textContent = "It's a Draw";
             return 0; 
         }
     }
 
     else if(playerAnswer === "paper"){
         if(computerAnswer === "scissors") {
-            score.textContent = "You Lose! Scissors beats Paper";
+            middleContainer.textContent = "You Lose! Scissors beats Paper";
             return -1;
         }
         else if(computerAnswer === "rock"){
-            score.textContent = "You Win! Paper beats Rock";
+            middleContainer.textContent = "You Win! Paper beats Rock";
             return 1;
         }
         else {
-            score.textContent = "It's a Draw";
+            middleContainer.textContent = "It's a Draw";
             return 0; 
         } 
     }
 
     else if(playerAnswer === "scissors"){
         if(computerAnswer === "rock") {
-            score.textContent = "You Lose! Rock beats Scissors";
+            middleContainer.textContent = "You Lose! Rock beats Scissors";
             return -1;
         }
         else if(computerAnswer === "paper"){
-            score.textContent = "You Win! Scissors beats Paper";
+            middleContainer.textContent = "You Win! Scissors beats Paper";
             return 1;
         }
         else {
-            score.textContent = "It's a Draw";
+            middleContainer.textContent = "It's a Draw";
             return 0; 
         }
     }
