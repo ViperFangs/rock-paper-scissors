@@ -68,18 +68,6 @@ function playRoundHelper(playerAnswer, computerAnswer){
 
 button.forEach(item => {
     item.addEventListener('click', event => {
-        if(item.getAttribute('id') == "rock"){
-            playRound("rock", computerPlay());
-        }
-        
-        if(item.getAttribute('id') == "paper"){
-            playRound("paper", computerPlay());
-        }
-
-        if(item.getAttribute('id') == "scissors"){
-            playRound("scissors", computerPlay());
-        }
-
-        //event.stopPropagation();
+        playRound(item.getAttribute('id'), computerPlay());
     });
     });
