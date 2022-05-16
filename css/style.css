@@ -15,8 +15,10 @@ body{
     justify-content: space-around;
 }
 
-.score{
-    text-align: center;
+#score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .buttons{
