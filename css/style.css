@@ -4,15 +4,20 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #1D3557;
+    color: #F1FAEE;
 }
 
 .mainContainer{
     display: flex;
     flex-direction: column;
-    border: 2px solid blue;
+    border: 8px solid #e63946;
+    border-radius: 16px;
     height: 50%;
-    width: auto;
+    width: 50%;
     justify-content: space-around;
+    align-self: center;
+    margin: 0px 32px;
 }
 
 #score{
@@ -30,7 +35,15 @@ body{
 }
 
 button{
-    padding: 64px;
+    padding: 32px;
+    background-color: #457b9D;
+    border: 0;
+    color: #F1FAEE;
+    border-radius: 12px;
+    display: flex;
+    min-width: 120px;
+    justify-content: center;
+    align-items: center;
 }
 
 #scoreBox{
