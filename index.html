@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./js/rps-ui.js" defer></script>
+    <script src="https://kit.fontawesome.com/dc7a565f3f.js" crossorigin="anonymous"></script>
     <link href="./css/style.css" rel="stylesheet">
     <title>Rock Paper Scissors</title>
 </head>
@@ -19,21 +20,30 @@
             </div>
         </div>
 
-        <div id="score">
-            Choose Your Attack
+        <div id="middle-container">
+            <div id="computer-output">
+                Computer's Selection
+            </div>
+           <div id="status-screen">Choose Your Attack</div> 
         </div>
         
         <div class="buttons">
             <div class="buttonContainer">
-                <button id="rock">Rock</button>
+                <button id="rock">
+                    <i class="fa-solid fa-hand-back-fist"></i>
+                </button>
             </div>
 
             <div class="buttonContainer">
-                <button id="paper">Paper</button>
+                <button id="paper">
+                    <i class="fa-solid fa-hand"></i>
+                </button>
             </div>
 
             <div class="buttonContainer">
-                <button id="scissors">Scissors</button>
+                <button id="scissors">
+                    <i class="fa-solid fa-hand-scissors"></i>
+                </button>
             </div>
 
         </div>
