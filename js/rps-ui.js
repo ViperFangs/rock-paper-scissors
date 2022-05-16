@@ -2,6 +2,9 @@ const button = document.querySelectorAll('button');
 const score = document.getElementById('score');
 const playerScoreContainer = document.getElementById('playerScore');
 const computerScoreContainer = document.getElementById('computerScore');
+const popupContainer = document.querySelector('.popup-container');
+const finalOutput = document.querySelector('.final-output');
+const repeatButton = document.querySelector('.repeat-button');
 
 let playerScore = 0;
 let computerScore = 0;
@@ -74,6 +77,8 @@ function playRoundHelper(playerAnswer, computerAnswer){
     }
 
 function resetGame(){
+    popupContainer.classList.remove('show');
+    repeatButton.addEventListener('click', resetGame);
     gameOver = 0;
     playerScore = 0;
     computerScore = 0;
@@ -96,17 +101,18 @@ function playGame(event){
     }
 
     if(playerScore > 4) {
-        score.textContent = "You Won the Game!"
         gameOver = 1;
+        finalOutput.textContent = "You Won!"
     }
 
-    if(computerScore > 4) {
-        score.textContent = "You Lost the Game"
+    else if(computerScore > 4) {
+        finalOutput.textContent = "You Lost."
         gameOver = 1;
     }
 
     if(gameOver == 1){
-        resetGame();
+        popupContainer.classList.add('show');
+        repeatButton.addEventListener('click', resetGame);
     }
 
 }
