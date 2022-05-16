@@ -1,3 +1,5 @@
+let button = document.querySelectorAll('button');
+
 function computerPlay() {
     let randomNumber = getRandomInt(3);
     let choices = ["Rock","Paper","Scissors"];
@@ -59,9 +61,10 @@ function playRoundHelper(playerAnswer, computerAnswer){
             return 0; 
         }
     }
-    }
 
-let button = document.querySelectorAll('button');
+    return 0;
+
+    }
 
 button.forEach(item => {
     item.addEventListener('click', event => {
