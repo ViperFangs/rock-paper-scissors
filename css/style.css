@@ -13,8 +13,8 @@ body{
     flex-direction: column;
     border: 8px solid #e63946;
     border-radius: 16px;
-    height: 50%;
-    width: 50%;
+    height: 75%;
+    width: 75%;
     justify-content: space-around;
     align-self: center;
     margin: 0px 32px;
@@ -22,10 +22,10 @@ body{
 
 #middle-container{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
     justify-content: space-evenly;
+    font-size: 24px;
+    align-items: baseline;
+    gap:16px;
 }
 
 .buttons{
@@ -104,5 +104,25 @@ button{
 
 i{
     font-size: 35px;
+}
+
+#computer-output{
+    display: flex;
+    flex-direction: column;
+}
+
+#status-screen{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 250px;
+}
+
+#computer-choice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    margin-top: 20px;
 }
 
