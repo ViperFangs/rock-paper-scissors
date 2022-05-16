@@ -101,7 +101,7 @@ function playGame(event){
     }
 
     if(computerScore > 4) {
-        score.textContent = "You lost the game :("
+        score.textContent = "You lost the game"
         gameOver = 1;
     }
 
