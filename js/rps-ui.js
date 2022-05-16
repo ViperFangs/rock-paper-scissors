@@ -1,5 +1,11 @@
-let button = document.querySelectorAll('button');
-let score = document.getElementById('score');
+const button = document.querySelectorAll('button');
+const score = document.getElementById('score');
+const playerScoreContainer = document.getElementById('playerScore');
+const computerScoreContainer = document.getElementById('computerScore');
+
+let playerScore = 0;
+let computerScore = 0;
+let gameOver = 0;
 
 function computerPlay() {
     let randomNumber = getRandomInt(3);
@@ -67,8 +73,42 @@ function playRoundHelper(playerAnswer, computerAnswer){
 
     }
 
-button.forEach(item => {
-    item.addEventListener('click', event => {
-        playRound(item.getAttribute('id'), computerPlay());
-    });
-    });
+function resetGame(){
+    gameOver = 0;
+    playerScore = 0;
+    computerScore = 0;
+    playerScoreContainer.textContent = `Player Score: ${playerScore}`;
+    computerScoreContainer.textContent = `Computer Score: ${computerScore}`;
+}
+
+
+function playGame(event){
+    console.log(event.path[0]);
+    let gameOutput = playRound(event.path[0].getAttribute('id'), computerPlay());
+
+    if(gameOutput == 1) {
+        playerScore += 1;
+        playerScoreContainer.textContent = `Player Score: ${playerScore}`;
+    }
+    else if(gameOutput == -1) {
+        computerScore += 1;
+        computerScoreContainer.textContent = `Computer Score: ${computerScore}`;
+    }
+
+    if(playerScore > 4) {
+        score.textContent = "You Win!"
+        gameOver = 1;
+    }
+
+    if(computerScore > 4) {
+        score.textContent = "You Lose :("
+        gameOver = 1;
+    }
+
+    if(gameOver == 1){
+        resetGame();
+    }
+
+}
+
+button.forEach(item => item.addEventListener('click', playGame));
