@@ -45,9 +45,19 @@ button{
     min-height: 100px;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
 }
 
 #scoreBox{
     display: flex;
     justify-content: space-around;
+}
+
+#playerScore,
+#computerScore{
+    font-size: 32px;
+}
+
+#score{
+    font-size: 24px;
 }
