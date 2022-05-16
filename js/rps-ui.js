@@ -94,7 +94,7 @@ function resetGame(){
     computerScore = 0;
     playerScoreContainer.textContent = `Player Score: ${playerScore}`;
     computerScoreContainer.textContent = `Computer Score: ${computerScore}`;
-    computerChoice.innerHTML = '<i class="fa-solid fa-spinner fa-spin-pulse"></i>';
+    computerChoice.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i>';
     statusScreen.textContent = 'Choose Your Attack';
     repeatButton.removeEventListener('click', resetGame);
 }
