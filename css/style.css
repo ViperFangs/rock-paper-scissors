@@ -3,13 +3,28 @@ body{
     margin: 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid blue;
+    height: 50%;
+    width: auto;
+    justify-content: space-around;
+}
+
+.score{
+    text-align: center;
 }
 
 .buttons{
     display: flex;
+    height: auto;
     justify-content: space-around;
-    margin-top: 50%;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 button{
