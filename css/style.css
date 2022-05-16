@@ -25,6 +25,7 @@ body{
     font-size: 24px;
     align-items: baseline;
     gap:16px;
+    text-align: center;
 }
 
 .buttons{
@@ -52,6 +53,7 @@ button{
 #scoreBox{
     display: flex;
     justify-content: space-evenly;
+    text-align: center;
 }
 
 #playerScore,
