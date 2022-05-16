@@ -37,7 +37,7 @@ body{
 
 button{
     padding: 32px;
-    background-color: #457b9D;
+    background-color: #e63946;
     border: 0;
     color: #F1FAEE;
     border-radius: 12px;
@@ -95,7 +95,6 @@ button{
 }
 
 .repeat-button{
-    background-color: #e63946;
     min-height: 20px;
     max-height: 20px;
 }
