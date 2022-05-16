@@ -61,3 +61,41 @@ button{
 #score{
     font-size: 24px;
 }
+
+.popup-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.final-output{
+    text-align: center;
+}
+
+.popup-output{
+    background-color: #1D3557;
+    width: 300px;
+    padding: 30px 60px;
+    max-width: 100%;
+    display: flex;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    gap: 24px;
+}
+
+.repeat-button{
+    background-color: #e63946;
+    min-height: 20px;
+    max-height: 20px;
+}
+
