@@ -32,3 +32,8 @@ body{
 button{
     padding: 64px;
 }
+
+#scoreBox{
+    display: flex;
+    justify-content: space-around;
+}
