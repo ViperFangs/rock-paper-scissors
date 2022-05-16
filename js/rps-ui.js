@@ -1,10 +1,11 @@
 const button = document.querySelectorAll('button');
-const middleContainer = document.getElementById('middle-container');
+const statusScreen = document.getElementById('status-screen');
 const playerScoreContainer = document.getElementById('playerScore');
 const computerScoreContainer = document.getElementById('computerScore');
 const popupContainer = document.querySelector('.popup-container');
 const finalOutput = document.querySelector('.final-output');
 const repeatButton = document.querySelector('.repeat-button');
+const computerChoice = document.getElementById('computer-choice');
 
 let playerScore = 0;
 let computerScore = 0;
@@ -29,45 +30,54 @@ function playRound(playerSelection, computerSelection){
 function playRoundHelper(playerAnswer, computerAnswer){
     if(playerAnswer === "rock"){
         if(computerAnswer === "paper") {
-            middleContainer.textContent = "You Lose! Paper beats Rock";
+            computerChoice.innerHTML = '<i class="fa-solid fa-hand"></i>';
+            statusScreen.textContent = "Sad Defeat! Paper beats Rock";
             return -1;
         }
         else if(computerAnswer === "scissors"){
-            middleContainer.textContent = "You Win! Rock beats Scissors";
+            computerChoice.innerHTML = '<i class="fa-solid fa-hand-scissors"></i>';
+            statusScreen.textContent = "Excellent Victory! Rock beats Scissors";
             return 1;
         }
         else {
-            middleContainer.textContent = "It's a Draw";
+            computerChoice.innerHTML = '<i class="fa-solid fa-hand-back-fist"></i>';
+            statusScreen.textContent = "That's a Draw";
             return 0; 
         }
     }
 
     else if(playerAnswer === "paper"){
         if(computerAnswer === "scissors") {
-            middleContainer.textContent = "You Lose! Scissors beats Paper";
+            computerChoice.innerHTML = '<i class="fa-solid fa-hand-scissors"></i>';
+            statusScreen.textContent = "Sad Defeat! Scissors beats Paper";
             return -1;
         }
         else if(computerAnswer === "rock"){
-            middleContainer.textContent = "You Win! Paper beats Rock";
+            computerChoice.innerHTML = '<i class="fa-solid fa-hand-back-fist"></i>';
+            statusScreen.textContent = "Excellent Victory! Paper beats Rock";
             return 1;
         }
         else {
-            middleContainer.textContent = "It's a Draw";
+            computerChoice.innerHTML = '<i class="fa-solid fa-hand"></i>';
+            statusScreen.textContent = "It's a Draw";
             return 0; 
         } 
     }
 
     else if(playerAnswer === "scissors"){
         if(computerAnswer === "rock") {
-            middleContainer.textContent = "You Lose! Rock beats Scissors";
+            computerChoice.innerHTML = '<i class="fa-solid fa-hand-back-fist"></i>';
+            statusScreen.textContent = "Sad Defeat! Rock beats Scissors";
             return -1;
         }
         else if(computerAnswer === "paper"){
-            middleContainer.textContent = "You Win! Scissors beats Paper";
+            computerChoice.innerHTML = '<i class="fa-solid fa-hand"></i>';
+            statusScreen.textContent = "Excellent Victory! Scissors beats Paper";
             return 1;
         }
         else {
-            middleContainer.textContent = "It's a Draw";
+            computerChoice.innerHTML = '<i class="fa-solid fa-hand-scissors"></i>';
+            statusScreen.textContent = "It's a Draw";
             return 0; 
         }
     }
@@ -84,6 +94,8 @@ function resetGame(){
     computerScore = 0;
     playerScoreContainer.textContent = `Player Score: ${playerScore}`;
     computerScoreContainer.textContent = `Computer Score: ${computerScore}`;
+    computerChoice.innerHTML = '';
+    statusScreen.textContent = 'Choose Your Attack';
 }
 
 
