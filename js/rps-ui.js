@@ -131,5 +131,6 @@ function playGame(event){
 
 button.forEach(item => {
     item.addEventListener('click', playGame);
-    item.addEventListener('touch', playGame);
+    item.addEventListener('touch', playGame, {passive: false});
+    item.addEventListener('touchstart', playGame, {passive: false});
 });
