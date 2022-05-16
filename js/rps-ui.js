@@ -129,4 +129,7 @@ function playGame(event){
 
 }
 
-button.forEach(item => item.addEventListener('click', playGame));
+button.forEach(item => {
+    item.addEventListener('click', playGame);
+    item.addEventListener('touch', playGame);
+});
