@@ -101,8 +101,7 @@ function resetGame(){
 
 
 function playGame(event){
-    console.log(event.path[0]);
-    let gameOutput = playRound(event.path[0].getAttribute('id'), computerPlay());
+    let gameOutput = playRound(this.getAttribute('id'), computerPlay());
 
     if(gameOutput == 1) {
         playerScore += 1;
