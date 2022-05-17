@@ -134,3 +134,5 @@ button.forEach(item => {
     item.addEventListener('touch', playGame, {passive: false});
     item.addEventListener('touchstart', playGame, {passive: false});
 });
+
+repeatButton.removeEventListener('click', playGame);
